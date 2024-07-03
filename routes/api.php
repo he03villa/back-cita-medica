@@ -11,7 +11,7 @@ Route::get('/user', function (Request $request) {
 
 Route::group([
  
-    'middleware' => 'api',
+    'middleware' => ['role:Super-Admin'],
     'prefix' => 'auth'
  
 ], function ($router) {
